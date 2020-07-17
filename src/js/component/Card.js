@@ -7,20 +7,20 @@ import PropTypes from "prop-types";
 
 class Card extends Component {
 	render() {
-		const { title, description, leftColor, rightColor } = this.props;
+		const { title, img, description, leftColor, rightColor } = this.props;
 		//background:  no-repeat, linear-gradient(to right, #A74CF2, #617BFB);
 		return (
 			<div
 				className="card mx-auto Fitness-Card"
 				style={{
 					//backgroundImage:`url(${circlesImg}), linear-gradient(to right, ${leftColor}, ${rightColor})`
-					background: ` linear-gradient(to right, #A74CF2, #617BFB)`
+					background: ` linear-gradient(to right, ${leftColor}, ${rightColor})`
 				}}>
 				<div className="card-body">
 					<div className="row center">
 						<div className="col-6 ">
 							<img
-								src={image1}
+								src={img}
 								height="120px"
 								className="float-right"
 							/>
@@ -35,13 +35,13 @@ class Card extends Component {
 		);
 	}
 
-	Card.propTypes = {
+	/*Card.propTypes = {
         // You can declare that a prop is a specific JS type. By default, these
         // are all optional.
-        name: PropTypes.string
-        //description: PropTypes.string
+        title: PropTypes.string
+        description: PropTypes.string
           
-    }
+    }*/
 }
 
 export default Card;
